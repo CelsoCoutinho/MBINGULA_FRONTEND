@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Sidebar from '../../components/Sidebar';
-import Navbar from '../../components/Navbar';
+import Sidebar from '../../components/SidebarBackOffice'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
 
@@ -43,7 +42,7 @@ function HomeAccess() {
         <Sidebar />
       </div>
       <div className='content'>
-        <Navbar Toggle={Toggle} />
+        
         <div className='content-inner'>
           <h1>Acessos</h1>
           <div className='custom-container'>

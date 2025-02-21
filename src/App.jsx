@@ -47,8 +47,6 @@ import CreateMesa from './Back-office/pages/mesa/Create.jsx'
 import ReadMesa from './Back-office/pages/mesa/Read.jsx'
 import UpdateMesa from './Back-office/pages/mesa/Update.jsx'
 import ReadMesaByFilter from './Back-office/pages/mesa/ReadByFilter.jsx'
-{/* Back-office - Other sidebar*/}
-import OtherSidebar from './Back-office/components/OtherSidebar.jsx'
 {/* Back-office - Acesso*/}
 import HomeAcesso from './Back-office/pages/acesso/Home.jsx'
 import ReadAcesso from './Back-office/pages/acesso/Read.jsx'
@@ -144,8 +142,7 @@ function App() {
             <Route path="/Back-office/pages/mesa/read/:id" element={<ReadMesa />}></Route>
             <Route path="/Back-office/pages/mesa/update/:id" element={<UpdateMesa />}></Route>
             <Route path="/Back-office/pages/mesaFilter" element={<ReadMesaByFilter />}></Route>
-            {/* Back-office - Other sidebar*/}
-            <Route path="/Back-office/components/otherSidebar" element={<OtherSidebar />}></Route>
+            
             {/* Back-office - Acesso*/}
             <Route path="/Back-office/pages/acesso" element={<HomeAcesso />}></Route>
             <Route path="/Back-office/pages/acesso/read/:id" element={<ReadAcesso />}></Route>
