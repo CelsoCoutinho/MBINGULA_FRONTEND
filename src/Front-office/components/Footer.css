@@ -5,6 +5,16 @@
     background-color: #0D0E10;
 }
 
+.onda {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+    /* Remove qualquer borda */
+    outline: none;
+    /* Garante que não há contorno */
+}
+
 #footer_items {
     display: flex;
     padding: 0px 8% 0px 8%;

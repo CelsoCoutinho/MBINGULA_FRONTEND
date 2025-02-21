@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
-import Sidebar from '../../components/Sidebar';
-import Navbar from '../../components/Navbar';
+import Sidebar from '../../components/SidebarBackOffice'
 import { Modal, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
@@ -78,7 +77,6 @@ function HomeEstoque() {
         <Sidebar />
       </div>
       <div className='content'>
-        <Navbar Toggle={Toggle} />
         <div className='content-inner'>
           <h1>Estoque</h1>
           <div className='custom-container'>

@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
-import Sidebar from '../../components/Sidebar';
-import Navbar from '../../components/Navbar';
+import Sidebar from '../../components/SidebarBackOffice'
 import { Modal, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
@@ -13,7 +12,6 @@ function HomeAtividades() {
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
-  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get('http://localhost:3000/getAllAtividades')
@@ -68,7 +66,6 @@ function HomeAtividades() {
         <Sidebar />
       </div>
       <div className='content'>
-        <Navbar Toggle={Toggle} />
         <div className='content-inner'>
           <h1>Atividades</h1>
           <div className='custom-container'>

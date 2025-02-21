@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaWhatsapp, FaFacebook, FaInstagram } from 'react-icons/fa';
-import ondas from '/ondas.svg'
+import ondas from '../assets/wave.svg'
 
 const socialNetworks = [
     { name: "whatsapp", icon: <FaWhatsapp /> },
@@ -11,8 +11,9 @@ const socialNetworks = [
 const Footer = () => {
     return (
         <>
+            
+                <img className='onda' src={ondas} alt="home" viewBox="0 0 1440 318" stroke="none" />
             <div className='container-footer'>
-                <img className='ond' src={ondas} alt="home" />
                 <div id="footer_items">
                     <div className='contactos'>
                         <h4>Contactos</h4>

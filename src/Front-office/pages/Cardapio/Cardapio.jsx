@@ -46,7 +46,7 @@ const Cardapio = () => {
                                 <img 
                                     src={`http://localhost:3000/images/${item.Image[0]?.path}`} 
                                     alt={item.name}
-                                    style={{ width: '100%', height: '10em', objectFit: 'cover' }}
+                                    // style={{ width: '100%', height: '200px', objectFit: 'cover' }}
                                 />
                             </div>
                             <h3 className="dish-title-cardapio-comida">

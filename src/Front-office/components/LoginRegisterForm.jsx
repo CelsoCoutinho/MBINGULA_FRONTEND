@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import api from '../../service/api';
+import { IoClose } from "react-icons/io5";
 import { AuthContext } from '../../context/AuthContext';
 import { Navigate } from 'react-router-dom';
 
@@ -10,7 +11,7 @@ const LoginRegisterForm = () => {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const accessName = "normal";
-  
+
   const [errorName, setErrorName] = useState("");
   const [errorEmail, setErrorEmail] = useState("");
   const [errorPhone, setErrorPhone] = useState("");
@@ -65,7 +66,7 @@ const LoginRegisterForm = () => {
     const data = {
       name, email, phone, password, accessName
     }
-    
+
     try {
       await api.post("/user", data);
       setIsCreated(true);
@@ -92,119 +93,119 @@ const LoginRegisterForm = () => {
     };
     await signIn(data);
   };
-  
+
   if (signed) {
     return <Navigate to="/" />
   } else {
     return (
       <div id='login-register'>
         <div className="div-main">
-          <div className="main1">
-            <input type="checkbox" id="chk" aria-hidden="true" />
 
-            <div className="login">
-              <form className="form" onSubmit={handleSignIn}>
-                <h1>Login</h1>
+          <input type="checkbox" id="chk" aria-hidden="true" />
 
-                <input 
-                  className="input" 
-                  id="telSign" 
-                  type="tel" 
-                  name="tel" 
-                  placeholder={errorPhone ? errorPhone : "Telefone"} 
-                  style={{ borderColor: errorPhone ? 'red' : '', color: errorPhone ? 'red' : '' }} 
-                  required="" 
-                  autoComplete='off' 
-                  onFocus={() => setErrorPhone("")}
-                  onChange={(e) => setPhone(e.target.value)} 
-                />
+          <div className="login">
+            <h1>Login</h1>
+            <form className="form" onSubmit={handleSignIn}>
 
-                <input 
-                  className="input" 
-                  id="passwordSign" 
-                  type="password" 
-                  name="password" 
-                  placeholder={errorPassword ? errorPassword : "Password"} 
-                  style={{ borderColor: errorPassword ? 'red' : '', color: errorPassword ? 'red' : '' }} 
-                  required="" 
-                  autoComplete='off' 
-                  onFocus={() => setErrorPassword("")}
-                  onChange={(e) => setPassword(e.target.value)} 
-                />
-                
-                <button type='submit'>Entrar</button>
-                
-                <div className='div-Nconta'>
-                  <p className='N-conta'>Não tem uma conta?</p>
-                  <label className="abrir-logout" htmlFor="chk" aria-hidden="true">registra-se</label>
-                </div>
-              </form>
-            </div>
+              <input
+                className="input"
+                id="telSign"
+                type="tel"
+                name="tel"
+                placeholder={errorPhone ? errorPhone : "Telefone"}
+                style={{ borderColor: errorPhone ? 'red' : '', color: errorPhone ? 'red' : '' }}
+                required=""
+                autoComplete='off'
+                onFocus={() => setErrorPhone("")}
+                onChange={(e) => setPhone(e.target.value)}
+              />
 
-            <div className="register">
-              <form className="form1" onSubmit={handleSaveUser}>
+              <input
+                className="input"
+                id="passwordSign"
+                type="password"
+                name="password"
+                placeholder={errorPassword ? errorPassword : "Password"}
+                style={{ borderColor: errorPassword ? 'red' : '', color: errorPassword ? 'red' : '' }}
+                required=""
+                autoComplete='off'
+                onFocus={() => setErrorPassword("")}
+                onChange={(e) => setPassword(e.target.value)}
+              />
 
-                <div className='fechar-registrar'>
-                  <label className='fechar-registrar1' htmlFor="chk" aria-hidden="true"><i className='bx bx-x bx-tada'></i></label>
-                </div>
+              <button type='submit' className='btn-form'>Entrar</button>
 
-                <h1>SignUp</h1>
+              <div className='div-Nconta'>
+                <p className='N-conta'>Não tem uma conta?</p>
+                <label className="abrir-logout" htmlFor="chk" aria-hidden="true">registra-se</label>
+              </div>
+            </form>
+          </div>
 
-                <input 
-                  className="input" 
-                  type="text" 
-                  name="txt" 
-                  placeholder={errorName ? errorName : "Nome"} 
-                  style={{ borderColor: errorName ? 'red' : '', color: errorName ? 'red' : '' }} 
-                  autoComplete='off' 
-                  onFocus={() => setErrorName("")}
-                  onChange={(e) => setName(e.target.value)} 
-                />
+          <div className="register">
+            <form className="form1" onSubmit={handleSaveUser}>
 
-                <input 
-                  className="input" 
-                  type="email" 
-                  name="email" 
-                  placeholder={errorEmail ? errorEmail : "Email"} 
-                  style={{ borderColor: errorEmail ? 'red' : '', color: errorEmail ? 'red' : '' }} 
-                  autoComplete='off' 
-                  onFocus={() => setErrorEmail("")}
-                  onChange={(e) => setEmail(e.target.value)} 
-                />
+              <div className='fechar-registrar'>
+                <label className='fechar-registrar1' htmlFor="chk" aria-hidden="true"><i><IoClose /></i></label>
+              </div>
 
-                <input 
-                  className="input" 
-                  type="number" 
-                  name="pswd" 
-                  placeholder={errorPhone ? errorPhone : "Telefone"} 
-                  style={{ borderColor: errorPhone ? 'red' : '', color: errorPhone ? 'red' : '' }} 
-                  autoComplete='off' 
-                  onFocus={() => setErrorPhone("")}
-                  onChange={(e) => setPhone(e.target.value)} 
-                />
+              <h1>SignUp</h1>
 
-                <input 
-                  className="input" 
-                  type="password" 
-                  name="pswd" 
-                  placeholder={errorPassword ? errorPassword : "Senha"} 
-                  style={{ borderColor: errorPassword ? 'red' : '', color: errorPassword ? 'red' : '' }} 
-                  autoComplete='off' 
-                  onFocus={() => setErrorPassword("")}
-                  onChange={(e) => setPassword(e.target.value)} 
-                />
+              <input
+                className="input"
+                type="text"
+                name="txt"
+                placeholder={errorName ? errorName : "Nome"}
+                style={{ borderColor: errorName ? 'red' : '', color: errorName ? 'red' : '' }}
+                autoComplete='off'
+                onFocus={() => setErrorName("")}
+                onChange={(e) => setName(e.target.value)}
+              />
 
-                {isCreated ? (
-                  <p style={{ color: 'green' }}>Criado com sucesso!</p>
-                ) : (
-                  <button type='submit'>Registrar</button>
-                )}
-                
-              </form>
-            </div>
+              <input
+                className="input"
+                type="email"
+                name="email"
+                placeholder={errorEmail ? errorEmail : "Email"}
+                style={{ borderColor: errorEmail ? 'red' : '', color: errorEmail ? 'red' : '' }}
+                autoComplete='off'
+                onFocus={() => setErrorEmail("")}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+
+              <input
+                className="input"
+                type="number"
+                name="pswd"
+                placeholder={errorPhone ? errorPhone : "Telefone"}
+                style={{ borderColor: errorPhone ? 'red' : '', color: errorPhone ? 'red' : '' }}
+                autoComplete='off'
+                onFocus={() => setErrorPhone("")}
+                onChange={(e) => setPhone(e.target.value)}
+              />
+
+              <input
+                className="input"
+                type="password"
+                name="pswd"
+                placeholder={errorPassword ? errorPassword : "Senha"}
+                style={{ borderColor: errorPassword ? 'red' : '', color: errorPassword ? 'red' : '' }}
+                autoComplete='off'
+                onFocus={() => setErrorPassword("")}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+
+              {isCreated ? (
+                <p style={{ color: 'green' }}>Criado com sucesso!</p>
+              ) : (
+                <button type='submit' className='btn-form'>Registrar</button>
+              )}
+
+            </form>
           </div>
         </div>
       </div>
+
     )
   }
 }

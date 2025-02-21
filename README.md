@@ -16,3 +16,12 @@
 
 * **Desenvolvedor do projeto** - *Backend* - [Leandro Ucuamba](https://ao.linkedin.com/in/leandrosantosucuamba)
 * **Desenvolvedor do projeto** - *Frontend (React.js) * - [Celso Coutinho](https://ao.linkedin.com/in/celso-coutinho-22075a230) e [Leandro Ucuamba](https://ao.linkedin.com/in/leandrosantosucuamba).
+
+<!-- criar env:
+
+DATABASE_URL = "postgresql://postgres:celso123@localhost:5432/prisma_db?schema=public"
+
+MY_SECRET_KEY = "546797867treygmhngfdty4ey66utr6545y6u9o"
+
+executar o comando:
+npm run migrate dev   -->
