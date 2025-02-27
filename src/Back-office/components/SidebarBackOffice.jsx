@@ -144,6 +144,8 @@ const SidebarBackOffice = () => {
 
     return (
         <Layout>
+            {!collapsed && <div className="overlay active" onClick={() => setCollapsed(true)}></div>}
+
             <Sider
                 className={`sidebar ${collapsed ? 'ocultar-sidebar' : ''}`}
                 collapsed={collapsed}
@@ -164,6 +166,7 @@ const SidebarBackOffice = () => {
                     items={menuItems}
                 />
             </Sider>
+
             <Layout>
                 <Header style={{ padding: 0, background: colorBgContainer }}>
                     <Button

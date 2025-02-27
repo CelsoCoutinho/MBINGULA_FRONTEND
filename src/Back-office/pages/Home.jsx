@@ -80,7 +80,7 @@ function Home() {
         datasets: [
             {
                 data: [mesas, pedidosDoDia, itemsCardapio, users],
-                backgroundColor: ['#4caf50', '#2196f3', '#ff5722', '#ffc107'],
+                backgroundColor: ['#cefbcc', '#CCDEFB', '#fbe7cc', '#fbf8cc'],
                 borderColor: ['#388e3c', '#1976d2', '#d84315', '#ffa000'],
                 borderWidth: 1,
             },
@@ -92,7 +92,7 @@ function Home() {
         datasets: [
             {
                 data: [mesas, pedidosDoDia, itemsCardapio, users],
-                backgroundColor: ['#4caf50', '#2196f3', '#ff5722', '#ffc107'],
+                backgroundColor: ['#cefbcc', '#CCDEFB', '#fbe7cc', '#fbf8cc'],
                 borderColor: ['#388e3c', '#1976d2', '#d84315', '#ffa000'],
                 borderWidth: 1,
             },
@@ -104,8 +104,8 @@ function Home() {
             <div className='cards-back-office'>
 
                 <NavLink to="/Back-office/pages/mesa" className="nav-card">
-                    <div className='cads-pequeno-1'>
-                        <MdOutlineTableBar id='icone-mesa' />
+                    <div className='cards-pequeno-1'>
+                        <MdOutlineTableBar className='icones-cards' />
                         <div className="alinhar-direita">
                             <span>Mesas</span>
                             <h2>{mesas}</h2>
@@ -114,8 +114,8 @@ function Home() {
                 </NavLink>
 
                 <NavLink to="/Back-office/pages/Pedido" className="nav-card">
-                    <div className='cads-pequeno-2'>
-                        <MdOutlineBorderColor id='icone-pedido' />
+                    <div className='cards-pequeno-2'>
+                        <MdOutlineBorderColor className='icones-cards' />
                         <div className="alinhar-direita">
                             <span>Pedidos do dia</span>
                             <h2>{pedidosDoDia}</h2>
@@ -124,8 +124,8 @@ function Home() {
                 </NavLink>
 
                 <NavLink to="/Back-office/pages/item" className="nav-card">
-                    <div className='cads-pequeno-3'>
-                        <MdOutlineMenuBook id='icone-pedido' />
+                    <div className='cards-pequeno-3'>
+                        <MdOutlineMenuBook className='icones-cards' />
                         <div className="alinhar-direita">
                             <span>Items cardápio</span>
                             <h2>{itemsCardapio}</h2>
@@ -134,8 +134,8 @@ function Home() {
                 </NavLink>
 
                 <NavLink to="/Back-office/pages/acesso" className="nav-card">
-                    <div className='cads-pequeno-4'>
-                        <TeamOutlined id='icone-pedido' />
+                    <div className='cards-pequeno-4'>
+                        <TeamOutlined className='icones-cards' />
                         <div className="alinhar-direita">
                             <span>Utilizadores</span>
                             <h2>{users}</h2>

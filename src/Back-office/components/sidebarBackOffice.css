@@ -1,7 +1,6 @@
 .sidebar {
     color: #fff;
-    /* position: fixed; */
-    height: 100vh;
+    height: 100dvh;
 }
 
 .menu-bar .ant-menu-item-selected {
@@ -35,7 +34,6 @@
 .menu-bar {
     display: flex;
     flex-direction: column;
-    /* gap: 5px; */
     position: relative;
 }
 
@@ -54,7 +52,35 @@
 }
 
 @media (max-width: 768px) {
+    .sidebar {
+        color: #fff;
+        position: fixed;
+        z-index: 1000;
+        height: 100dvh;
+    }
+
     .ocultar-sidebar {
-        display: none !important;
+        transform: translateX(-100%);
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100dvh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        display: none;
+    }
+
+    .overlay.active {
+        display: block;
+    }
+
+    .toggle {
+        position: absolute;
+        right: 10px;
+        top: 10px;
     }
 }

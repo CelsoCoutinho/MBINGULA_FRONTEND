@@ -90,7 +90,6 @@ import ReadPedidoFilter from './Front-office/pages/Pedido/ReadFilter.jsx'
 import Carrinho from './Front-office/components/Cart.jsx'
 {/* Back-office - change status pedido*/}
 import HomePedidoBack from './Back-office/pages/pedido/Home.jsx'
-import UpdatePedidoBack from './Back-office/pages/pedido/Update.jsx'
 
 function App() {
   return (
@@ -186,7 +185,6 @@ function App() {
             <Route path="/Front-office/carrinho" element={<Carrinho />}></Route>
             {/* Back-office - change status pedido local*/}
             <Route path="/Back-office/pages/Pedido" element={<HomePedidoBack />}></Route>
-            <Route path="/Back-office/pages/Pedido/update/:id" element={<UpdatePedidoBack />}></Route>
         </Routes>
       </AuthProvider>
     </div>
