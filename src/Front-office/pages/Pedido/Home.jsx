@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Menu from '../../components/Menu'
 import { Link, useNavigate } from 'react-router-dom';
 import { Modal, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -48,20 +49,29 @@ function Pedido() {
   const confirmDelete = () => {
     if (selectedId) {
       axios.delete(`http://localhost:3000/deletePedidoLocal/${selectedId}`)
-        .then(res => {
+        .then(() => {
           setShowConfirmModal(false);
           setShowSuccessModal(true);
-          setTimeout(() => {
-            setShowSuccessModal(false);
-            location.reload();
-          }, 1500);
+          setData(data.filter(pedido => pedido.id !== selectedId));
+          setFilteredData(filteredData.filter(pedido => pedido.id !== selectedId));
+          setTimeout(() => setShowSuccessModal(false), 1500);
         })
         .catch(err => console.log(err));
     }
   };
 
+  const handleStatusUpdate = (pedidoId) => {
+    axios.patch(`http://localhost:3000/updateStatusPedidoLocal/${pedidoId}`, { status: "Levantado" })
+      .then(() => {
+        setData(data.map(pedido => pedido.id === pedidoId ? { ...pedido, status: "Levantado" } : pedido));
+        setFilteredData(filteredData.map(pedido => pedido.id === pedidoId ? { ...pedido, status: "Levantado" } : pedido));
+      })
+      .catch(err => console.log(err));
+  };
+
   return (
     <div className="home-container">
+      <Menu />
       <div className='content'>
         <div className='content-inner'>
           <h1>Pedidos no Local</h1>
@@ -111,14 +121,7 @@ function Pedido() {
 
           <div className='custom-container'>
             <div className='button-container'>
-              <div className='left-buttons'>
-                <Link to="/Front-office/pages/PedidoFilter" className='btn btn-search'>
-                  <i className="bi bi-search"></i> Pesquisa avançada
-                </Link>
-              </div>
-              <div className='right-buttons'>
-                <Link to="/Front-office/carrinho" className='btn btn-success'>Fazer pedido +</Link>
-              </div>
+              <Link to="/Front-office/carrinho" className='btn btn-success'>Fazer pedido +</Link>
             </div>
 
             <div className="mesa-list">
@@ -126,7 +129,7 @@ function Pedido() {
                 <div key={i} className="mesa-item border rounded p-3 mb-3">
                   <div className="row">
                     <div className="col-md-4">
-                      <p><strong>ID:</strong> {pedido.id}</p>
+                      {/* <p><strong>ID:</strong> {pedido.id}</p> */}
                       <p><strong>Número do Pedido:</strong> {pedido.numeroPedido}</p>
                       <p><strong>Tipo de Consumo:</strong> {pedido.tipoConsumo}</p>
                     </div>
@@ -136,16 +139,16 @@ function Pedido() {
                       <p><strong>Método de Pagamento:</strong> {pedido.metodoPagamento}</p>
                     </div>
                     <div className="col-md-4">
-                      <p><strong>Status:</strong> 
+                      <p><strong>Status:</strong>
                         <span
-                            style={{
+                          style={{
                             color: pedido.status === 'em preparação' ? 'yellow' : pedido.status === 'pronto a levantar' ? 'green' : 'black',
                             backgroundColor: pedido.status === 'em preparação' ? 'rgba(0, 0, 0, 0.4)' : pedido.status === 'pronto a levantar' ? 'rgba(0, 128, 0, 0.2)' : 'transparent',
                             padding: '5px',
                             borderRadius: '5px',
                             marginLeft: '4px'
-                            }}>
-                            {pedido.status}
+                          }}>
+                          {pedido.status}
                         </span>
                       </p>
                       {pedido.numeroMesa === 41 ? (
@@ -155,15 +158,26 @@ function Pedido() {
                       )}
                       <p><strong>Cliente:</strong> {pedido.userName}</p>
                       <p><strong>Telefone:</strong> {pedido.userPhone}</p>
-                      <p><strong>Solicitado em:</strong> {new Date(pedido.created_at).toLocaleString()}</p>
                     </div>
                   </div>
+
                   <div className="button-group mt-3">
-                    <Link to={`/Front-office/pages/Pedido/Update/${pedido.id}`} className='btn-sm btn-primary'>
-                      <i className="bi bi-pencil"></i>
-                    </Link>
-                    <button onClick={() => handleDelete(pedido.id)} className='btn-sm btn-danger'>
-                      <i className="bi bi-trash"></i>
+
+                    <button
+                      className="btn btn-primary btn-sm"
+                      onClick={() => navigate(`/Front-office/pages/Pedido/Update/${pedido.id}`)}
+                      disabled={pedido.status === "Levantado" || pedido.status === 'pronto a levantar'}
+                    >
+                      <i className="bi bi-pencil"></i> Editar
+                    </button>
+
+                    
+                    <button className="btn btn-warning btn-sm" onClick={() => handleStatusUpdate(pedido.id)} disabled={pedido.status === "Levantado" || pedido.status === "em preparação"}>
+                      Levantado
+                    </button>
+
+                    <button onClick={() => handleDelete(pedido.id)} className='btn btn-danger btn-sm' >
+                      <i className="bi bi-trash"></i> Deletar
                     </button>
                   </div>
                 </div>
@@ -179,18 +193,7 @@ function Pedido() {
         </Modal.Header>
         <Modal.Body>Tem certeza que deseja deletar este pedido?</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowConfirmModal(false)}>Cancelar</Button>
           <Button variant="danger" onClick={confirmDelete}>Deletar</Button>
-        </Modal.Footer>
-      </Modal>
-
-      <Modal show={showSuccessModal} onHide={() => setShowSuccessModal(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Sucesso</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Pedido deletado com sucesso!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="primary" onClick={() => setShowSuccessModal(false)}>Ok</Button>
         </Modal.Footer>
       </Modal>
     </div>

@@ -1,124 +1,157 @@
-.home-container {
-  display: flex;
-}
-
-.sidebar-container {
-  width: auto;
-  position: fixed;
-}
-
-.sidebar-invisible {
-  visibility: hidden;
-}
-
-.content {
-  flex: 1;
-  overflow: auto;
-}
-
-.content-inner {
+.pedido-main {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: #fff;
-  min-height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  /* border: 1px solid red; */
 }
 
-h1 {
-  color: rgb(0, 0, 0);
+#titulos-back-office {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  text-align: center;
 }
 
-.custom-container {
+.div-filtro-delete {
+  /* border: 1px solid green; */
   width: 90%;
-  max-width: 100%;
-  background-color: #e9e8e8;
-  border: none;
-  border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
 }
 
-.button-container {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 16px;
+.div-filtro-delete input {
+  width: 20%;
+  font-size: 1rem;
+  padding: .4rem .5rem;
+  border-radius: .5rem;
+  transition: .3s;
+  outline: none;
 }
 
-.pedido-list {
+.btn-delete {
+  font-size: 1rem;
+  border: 1px solid red;
+  background-color: rgba(255, 0, 0, 0.1);
+  color: red;
+  /* height: 30px; */
+  padding: .3rem 1rem;
+  border-radius: 2rem;
+  transition: .3s;
+  outline: none;
+  transition: .5s;
+}
+
+.btn-delete:hover {
+  transform: scale(0.95);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  background-color: red;
+  color: white;
+  transition: .5s;
+}
+
+.content-pedido {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  height: calc(100dvh - 100px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* border: 1px solid blue; */
+  padding: 16px 10px;
+}
+
+.content-pedido::-webkit-scrollbar {
+  display: none;
 }
 
 .pedido-item {
-  border: 1px solid #ddd;
-  padding: 16px;
-  margin-bottom: 16px;
-  background-color: #f5f5f5;
+  position: relative;
+}
+
+.div-btn-status {
+  position: absolute;
+  top: 0;
+  right: 4%;
+}
+
+#btn-status {
+  font-size: 1.5rem;
+  color: green;
+  background-color: transparent;
+  border: none;
+}
+
+#btn-status:disabled {
+  color: gray;
+}
+
+.corpo-cards-pedido {
+  width: 250px;
+  height: 100%;
+  background: white;
+  border: 2px dashed #b4b4b4;
+  padding: 15px;
   border-radius: 8px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.pedido-item p {
-  margin: 0;
-  padding: 4px 0;
-}
-
-.button-group {
-  grid-column: span 2;
-  display: flex;
-  margin-top: 16px;
-  justify-content: flex-start;
-}
-
-.button-group .btn-sm {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 8px;
+.titulo-card-pedido {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  font-weight: bold;
   text-align: center;
-  cursor: pointer;
-  transition: background-color 0.2s, border-color 0.2s;
+  margin-bottom: 1%;
 }
 
-.button-group .btn-sm:last-child {
-  margin-right: 0;
+.info-pedido {
+  text-align: left;
+  font-size: 0.85rem;
+  margin-bottom: 0px;
+  margin-bottom: 2%;
+  /* padding-left: 2%; */
 }
 
-.btn-info, .btn-primary, .btn-danger {
-  border: 2px solid transparent;
-  border-radius: 0.375rem;
-  padding: 0.375rem 0.75rem;
+.info-pedido-span {
+  font-weight: 700;
+  color: #001529;
+}
+
+#titulo-tabela {
   font-size: 1rem;
+  text-align: center;
 }
 
-.btn-info:hover {
-  background-color: #c7e9ef;
-  border-color: #8ed1da;
+.corpo-cards-pedido table {
+  width: 100%;
+  /* border-collapse: collapse; */
+  margin-bottom: 15px;
+  font-size: 0.85rem;
 }
 
-.btn-primary:hover {
-  background-color: #b4d1f0;
-  border-color: #89b3e1;
+.corpo-cards-pedido table th,
+.corpo-cards-pedido table td {
+  /* padding: 4px; */
+  text-align: left;
+  border-bottom: 1px solid #eee;
 }
 
-.btn-danger:hover {
-  background-color: #dfb0b4;
-  border-color: #b5636c;
+td p {
+  margin: 0;
+  line-height: 1.2rem;
+  /* Ajuste conforme necessário */
 }
 
-.button-container {
+.total-pedido {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 16px;
-}
-
-.right-buttons {
-  display: flex;
-  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .status-em-preparacao {
@@ -135,17 +168,31 @@ h1 {
   border-radius: 4px;
 }
 
-
 @media (max-width: 768px) {
-  .custom-container {
-    width: 90%;
+  .content-pedido {
+    padding: 30px 0px;
+    gap: 40px 20px;
+  }
+
+  .div-filtro-delete {
+    width: 95%;
+  }
+
+  .div-filtro-delete input {
+    width: 40%;
+    padding: .2rem .5rem;
+  }
+
+  .btn-delete {
+    padding: .2rem .5rem;
+  }
+
+  .corpo-cards-pedido {
+    width: 340px;
   }
 
   h1 {
     margin-bottom: 8%;
   }
 
-  .pedido-item {
-    grid-template-columns: 1fr;
-  }
 }

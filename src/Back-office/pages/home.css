@@ -22,80 +22,96 @@
 
 .alinhar-direita span {
     font-size: 1.2rem;
-    color: white;
+    /* color: white; */
+    color: black;
 }
 
 .alinhar-direita h2 {
     font-size: 1.5rem;
-    color: white;
+    /* color: white; */
+    color: black;
+}
+
+.icones-cards {
+    font-size: 2.5rem;
+    /* color: white; */
+    color: black;
 }
 
 .nav-card {
     width: 20%;
 }
 
-.cads-pequeno-1 {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+.cards-pequeno-1 {
+    border: 1px solid #54ef40;
+    /* box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); */
     border-radius: 10px;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #4CAF50;
+    /* background: #4CAF50; */
+    background: #cefbcc;
+    transition: .5s
 }
 
-#icone-mesa {
-    font-size: 2.5rem;
-    color: white;
+.cards-pequeno-1:hover {
+    background: #A0FF9A;
+    transition: .5s;
 }
 
-.cads-pequeno-2 {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+.cards-pequeno-2 {
+    border: 1px solid #4082EF;
+    /* box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); */
     border-radius: 10px;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #2196F3;
+    /* background: #2196F3; */
+    background: #CCDEFB;
+    transition: .5s;
 }
 
-#icone-pedido {
-    font-size: 2.5rem;
-    color: white;
+.cards-pequeno-2:hover {
+    background: #9AC1FF;
+    transition: .5s;
 }
 
-.cads-pequeno-3 {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+.cards-pequeno-3 {
+    border: 1px solid #f75e30;
+    /* box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); */
     border-radius: 10px;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #FF5722;
+    /* background: #FF5722; */
+    background: #fbe7cc;
+    transition: .5s;
 }
 
-#icone-pedido {
-    font-size: 2.5rem;
-    color: white;
+.cards-pequeno-3:hover {
+    background: #FFD39A;
+    transition: .5s;
 }
 
-.cads-pequeno-4 {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+.cards-pequeno-4 {
+    border: 1px solid #FFC107;
+    /* box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); */
     border-radius: 10px;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #FFC107;
+    /* background: #FFC107; */
+    background: #fbf8cc;
+    transition: .5s;
 }
 
-#icone-pedido {
-    font-size: 2.5rem;
-    color: white;
+.cards-pequeno-4:hover {
+    background: #FFF89A;
+    transition: .5s;
 }
 
 .div-main-graficos {
