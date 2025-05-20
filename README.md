@@ -4,7 +4,14 @@
 # Frontend of the software for the restaurant - MBINGULA
 
 This is a project I started around "03/17/2024", where I was given a challenge to provide solutions to the problems faced by Restaurante Mbingula (Luanda, Angola) up until "09/15/2024".
- 
+
+<strong>Online management system developed</strong> for <strong>Mbingula Restaurant</strong>, located in Talatona, Luanda – approximately 400 meters past the FreshMart supermarket. The goal of the project was to modernize the restaurant’s internal processes and provide a better experience for customers. The application has two main areas: one for administrators (management of orders, products, employees, and reports) and another for customers (placing orders, viewing the menu, and table reservations). The project was developed by a team of three people, with my main responsibility being the interface design and the development of user interaction with the system (UI/UX and Fullstack).
+
+* Collected and analyzed data from the restaurant to understand the business needs;
+* Designed the application layout in Figma, prioritizing usability and aesthetics;
+* Implemented the design in React, ensuring visual fidelity and responsiveness;
+* Integrated the frontend with the backend-developed API;
+* Collaborated on backend adjustments to align features with the system logic.
 
 ## 🛠️ Built with:
 
@@ -15,11 +22,10 @@ This is a project I started around "03/17/2024", where I was given a challenge t
 
 * https://github.com/LeandroUcuamba/MBINGULA_BACKEND_API
 
-
 ## ✒️ Developers/Contributors:
 
-* **Project Developer** - *Backend* - [Leandro Ucuamba](https://ao.linkedin.com/in/leandrosantosucuamba)
 * **Project Developer** - *Frontend (React.js) * - [Celso Coutinho](https://ao.linkedin.com/in/celso-coutinho-22075a230) e [Leandro Ucuamba](https://ao.linkedin.com/in/leandrosantosucuamba).
+* **Project Developer** - *Backend* - [Celso Coutinho](https://ao.linkedin.com/in/celso-coutinho-22075a230) e [Leandro Ucuamba](https://ao.linkedin.com/in/leandrosantosucuamba)
 
 
 ## 📷 screenshot:
