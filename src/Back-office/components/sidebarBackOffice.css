@@ -1,6 +1,7 @@
 .sidebar {
     color: #fff;
     height: 100dvh;
+    overflow: hidden;
 }
 
 .menu-bar .ant-menu-item-selected {

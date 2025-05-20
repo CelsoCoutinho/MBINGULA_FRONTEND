@@ -70,7 +70,6 @@ const Home = () => {
             </div>
             <Cardapio />
             <AtividadeHome />
-            <Cardapio />
             <Footer />
         </>
     )

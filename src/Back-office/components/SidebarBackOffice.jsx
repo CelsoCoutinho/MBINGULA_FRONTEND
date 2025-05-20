@@ -107,33 +107,33 @@ const SidebarBackOffice = () => {
                     key: "/Back-office/pages/atividade",
                     icon: <MdOutlineLocalActivity />,
                     label: <NavLink to="/Back-office/pages/atividade">Atividades da casa</NavLink>
-                },
-                {
-                    key: "/Back-office/pages/Pedido",
-                    icon: <MdOutlineBorderColor />,
-                    label: <NavLink to="/Back-office/pages/Pedido">Pedidos</NavLink>
-                },
+                },     
                 {
                     key: "/Back-office/pages/mesa",
                     icon: <MdOutlineTableBar />,
                     label: <NavLink to="/Back-office/pages/mesa">Mesas</NavLink>
                 },
                 {
-                    key: "/Back-office/pages/item",
-                    icon: <MdOutlineMenuBook />,
-                    label: <NavLink to="/Back-office/pages/item">Itens do cardápio</NavLink>
+                    key: "/Back-office/pages/sector",
+                    icon: <AppstoreAddOutlined />,
+                    label: <NavLink to="/Back-office/pages/sector">Setor</NavLink>
                 }
             ]
         },
         {
-            key: "/Back-office/pages/sector",
-            icon: <AppstoreAddOutlined />,
-            label: <NavLink to="/Back-office/pages/sector">Setor</NavLink>
+            key: "/Back-office/pages/Pedido",
+            icon: <MdOutlineBorderColor />,
+            label: <NavLink to="/Back-office/pages/Pedido">Pedidos</NavLink>
+        },
+        {
+            key: "/Back-office/pages/item",
+            icon: <MdOutlineMenuBook />,
+            label: <NavLink to="/Back-office/pages/item">Itens do cardápio</NavLink>
         },
         {
             key: "/Back-office/pages/avaliacao",
             icon: <MdOutlineFeedback />,
-            label: <NavLink to="/Back-office/pages/avaliacao">Avaliações - "Feedback"</NavLink>
+            label: <NavLink to="/Back-office/pages/avaliacao">Avaliações</NavLink>
         },
         {
             key: "/",
