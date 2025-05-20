@@ -3,7 +3,6 @@ import Sidebar from '../../components/SidebarBackOffice';
 import { useEffect, useState } from 'react';
 import { FaCheckCircle } from "react-icons/fa";
 import axios from 'axios';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function PedidoLocal() {
   const [data, setData] = useState([]);

@@ -16,6 +16,7 @@ ChartJS.register(
 
 function Home() {
     const [mesas, setMesas] = useState(0);
+    const [avaliacoes, setAvaliacoes] = useState(0);
     const [pedidosDoDia, setPedidosDoDia] = useState(0);
     const [itemsCardapio, setItemsCardapio] = useState(0);
     const [users, setUsers] = useState(0);
@@ -28,6 +29,16 @@ function Home() {
                 setMesas(data.length);
             } catch (error) {
                 console.error('Erro ao buscar as mesas:', error);
+            }
+        };
+        
+        const fetchAvaliacoes = async () => {
+            try {
+                const avaliacoes = await axios.get('http://localhost:3000/getAvaliacoes');
+                const dataAvaliacoes = avaliacoes.data;
+                setAvaliacoes(dataAvaliacoes.length);
+            } catch (error) {
+                console.error('Erro ao buscar as avaliações:', error);
             }
         };
 
@@ -70,30 +81,31 @@ function Home() {
         };
 
         fetchMesas();
+        fetchAvaliacoes();
         fetchPedidosDoDia();
         fetchItemsCardapio();
         fetchAllUsers();
     }, []);
 
     const pieData = {
-        labels: ['Mesas', 'Pedidos do Dia', 'Items Cardápio', 'Utilizadores'],
+        labels: ['Mesas', 'Pedidos do Dia', 'Items Cardápio', 'Utilizadores', 'Avaliações'],
         datasets: [
             {
-                data: [mesas, pedidosDoDia, itemsCardapio, users],
-                backgroundColor: ['#cefbcc', '#CCDEFB', '#fbe7cc', '#fbf8cc'],
-                borderColor: ['#388e3c', '#1976d2', '#d84315', '#ffa000'],
+                data: [mesas, pedidosDoDia, itemsCardapio, users, avaliacoes],
+                backgroundColor: ['#cefbcc', '#CCDEFB', '#fbe7cc', '#fbf8cc', '#fbccf5'],
+                borderColor: ['#388e3c', '#1976d2', '#d84315', '#ffa000', '#e770e1'],
                 borderWidth: 1,
             },
         ],
     };
 
     const barData = {
-        labels: ['Mesas', 'Pedidos do Dia', 'Items Cardápio', 'Utilizadores'],
+        labels: ['Mesas', 'Pedidos do Dia', 'Items Cardápio', 'Utilizadores', 'Avaliações'],
         datasets: [
             {
-                data: [mesas, pedidosDoDia, itemsCardapio, users],
-                backgroundColor: ['#cefbcc', '#CCDEFB', '#fbe7cc', '#fbf8cc'],
-                borderColor: ['#388e3c', '#1976d2', '#d84315', '#ffa000'],
+                data: [mesas, pedidosDoDia, itemsCardapio, users, avaliacoes],
+                backgroundColor: ['#cefbcc', '#CCDEFB', '#fbe7cc', '#fbf8cc', '#fbccf5'],
+                borderColor: ['#388e3c', '#1976d2', '#d84315', '#ffa000', '#e770e1'],
                 borderWidth: 1,
             },
         ],
