@@ -24,8 +24,8 @@ This is a project I started around "03/17/2024", where I was given a challenge t
 
 ## ✒️ Developers/Contributors:
 
-* **Project Developer** - *Frontend (React.js) * - [Leandro Ucuamba](https://ao.linkedin.com/in/leandrosantosucuamba) e [Celso Coutinho](https://ao.linkedin.com/in/celso-coutinho-22075a230)
-* **Project Developer** - *Backend* - [Celso Coutinho](https://ao.linkedin.com/in/celso-coutinho-22075a230) e [Leandro Ucuamba](https://ao.linkedin.com/in/leandrosantosucuamba)
+* **Project Developer** - *Frontend (React.js) * - [Celso Coutinho](https://ao.linkedin.com/in/celso-coutinho-22075a230) / [Leandro Ucuamba](https://ao.linkedin.com/in/leandrosantosucuamba)
+* **Project Developer** - *Backend* - [Leandro Ucuamba](https://ao.linkedin.com/in/leandrosantosucuamba) / [Celso Coutinho](https://ao.linkedin.com/in/celso-coutinho-22075a230)
 
 
 ## 📷 screenshot:
