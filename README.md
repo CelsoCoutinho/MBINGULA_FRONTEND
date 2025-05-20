@@ -39,6 +39,8 @@ This is a project I started around "03/17/2024", where I was given a challenge t
 ![Frontend-7](https://github.com/CelsoCoutinho/port_celso_coutinho_dev/blob/main/src/assets/mbimgula/mbimgula7.png)
 ![Frontend-9](https://github.com/CelsoCoutinho/port_celso_coutinho_dev/blob/main/src/assets/mbimgula/mbimgula8.png)
 ![Frontend-8](https://github.com/CelsoCoutinho/port_celso_coutinho_dev/blob/main/src/assets/mbimgula/mbimgula9.png)
+![Frontend-10](https://github.com/CelsoCoutinho/port_celso_coutinho_dev/blob/main/src/assets/mbimgula/mbimgula10.png)
+![Frontend-11](https://github.com/CelsoCoutinho/port_celso_coutinho_dev/blob/main/src/assets/mbimgula/mbimgula11.png)
 
 
 
