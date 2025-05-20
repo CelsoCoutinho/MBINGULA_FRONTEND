@@ -1,27 +1,39 @@
 # MBINGULA_FRONTEND - ReactJS
- My final university project - Restaurante Mbingula
+ My final university project - Mbingula Restaurant
 
-# Frontend do software do restaurante - MBINGULA
+# Frontend of the software for the restaurant - MBINGULA
 
- Este é um projeto que dei inicio a sensivelmente no dia "17/03/2024", cujo me foi proposto um desafio para dar solução há problemas que o restaurante Mbingula (Luanda, Angola) enfreta até o momento "15/09/24".
+This is a project I started around "03/17/2024", where I was given a challenge to provide solutions to the problems faced by Restaurante Mbingula (Luanda, Angola) up until "09/15/2024".
  
 
-## 🛠️ Construído com
+## 🛠️ Built with:
 
 * [ReactJS](https://react.dev/).
 * [JavaScript](https://devdocs.io/javascript/).
 
+## ⚙️ Backend app:
 
-## ✒️ Autores
+* https://github.com/LeandroUcuamba/MBINGULA_BACKEND_API
 
-* **Desenvolvedor do projeto** - *Backend* - [Leandro Ucuamba](https://ao.linkedin.com/in/leandrosantosucuamba)
-* **Desenvolvedor do projeto** - *Frontend (React.js) * - [Celso Coutinho](https://ao.linkedin.com/in/celso-coutinho-22075a230) e [Leandro Ucuamba](https://ao.linkedin.com/in/leandrosantosucuamba).
 
-<!-- criar env:
+## ✒️ Developers/Contributors:
 
-DATABASE_URL = "postgresql://postgres:celso123@localhost:5432/prisma_db?schema=public"
+* **Project Developer** - *Backend* - [Leandro Ucuamba](https://ao.linkedin.com/in/leandrosantosucuamba)
+* **Project Developer** - *Frontend (React.js) * - [Celso Coutinho](https://ao.linkedin.com/in/celso-coutinho-22075a230) e [Leandro Ucuamba](https://ao.linkedin.com/in/leandrosantosucuamba).
 
-MY_SECRET_KEY = "546797867treygmhngfdty4ey66utr6545y6u9o"
 
-executar o comando:
-npm run migrate dev   -->
+## 📷 screenshot:
+
+![Frontend-1](https://github.com/CelsoCoutinho/port_celso_coutinho_dev/blob/main/src/assets/mbimgula/mbimgula1.png)
+![Frontend-2](https://github.com/CelsoCoutinho/port_celso_coutinho_dev/blob/main/src/assets/mbimgula/mbimgula2.png)
+![Frontend-4](https://github.com/CelsoCoutinho/port_celso_coutinho_dev/blob/main/src/assets/mbimgula/mbimgula4.png)
+![Frontend-3](https://github.com/CelsoCoutinho/port_celso_coutinho_dev/blob/main/src/assets/mbimgula/mbimgula3.png)
+![Frontend-5](https://github.com/CelsoCoutinho/port_celso_coutinho_dev/blob/main/src/assets/mbimgula/mbimgula5.png)
+![Frontend-6](https://github.com/CelsoCoutinho/port_celso_coutinho_dev/blob/main/src/assets/mbimgula/mbimgula6.png)
+![Frontend-7](https://github.com/CelsoCoutinho/port_celso_coutinho_dev/blob/main/src/assets/mbimgula/mbimgula7.png)
+![Frontend-9](https://github.com/CelsoCoutinho/port_celso_coutinho_dev/blob/main/src/assets/mbimgula/mbimgula8.png)
+![Frontend-8](https://github.com/CelsoCoutinho/port_celso_coutinho_dev/blob/main/src/assets/mbimgula/mbimgula9.png)
+
+
+
+
