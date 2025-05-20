@@ -27,6 +27,12 @@ This is a project I started around "03/17/2024", where I was given a challenge t
 * **Project Developer** - *Frontend (React.js) * - [Celso Coutinho](https://ao.linkedin.com/in/celso-coutinho-22075a230) / [Leandro Ucuamba](https://ao.linkedin.com/in/leandrosantosucuamba)
 * **Project Developer** - *Backend* - [Leandro Ucuamba](https://ao.linkedin.com/in/leandrosantosucuamba) / [Celso Coutinho](https://ao.linkedin.com/in/celso-coutinho-22075a230)
 
+how to use the project.<br>
+create env:<br>
+DATABASE_URL = "postgresql://postgres:celso123@localhost:5432/prisma_db?schema=public"<br>
+MY_SECRET_KEY = "546797867treygmhngfdty4ey66utr6545y6u9o"<br>
+executar o comando:<br>
+npm run migrate dev 
 
 ## 📷 screenshot:
 
